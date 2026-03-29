@@ -12,37 +12,35 @@
       font-family: Arial;
       height: 100vh;
       overflow: hidden;
-      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* 🖼️ Encabezado */
+    /* Contenedor principal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* espacio entre elementos */
+    }
+
+    /* Imagen encabezado */
     .titulo-img {
       width: 70%;
       max-width: 350px;
-      display: block;
-      margin: 40px auto 0 auto;
-      position: relative;
-      z-index: 2;
     }
 
-    /* 🖼️ Imagen central */
+    /* Imagen principal */
     .dibujo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       width: 80%;
       max-width: 400px;
       border-radius: 20px;
-      z-index: 1;
     }
 
-    /* 🖼️ Imagen botón (más arriba) */
+    /* Imagen botón */
     .boton-img {
-      position: absolute;
-      bottom: 50%;
-      left: 50%;
-      transform: translate(-50%, 40px); /* 🔥 AJUSTADO */
       width: 180px;
       cursor: pointer;
 
@@ -53,40 +51,35 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    /* Aparición */
     .mostrar {
       opacity: 1;
     }
 
-    /* Hover */
     .boton-img:hover {
-      transform: translate(-50%, 40px) scale(1.08);
+      transform: scale(1.08);
       box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     }
 
-    /* 📱 Ajuste para celular */
+    /* 📱 Ajuste celular */
     @media (max-width: 600px) {
       .boton-img {
         width: 150px;
-        transform: translate(-50%, 20px); /* 🔥 MÁS ARRIBA */
-      }
-
-      .boton-img:hover {
-        transform: translate(-50%, 20px) scale(1.08);
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🖼️ Encabezado -->
-  <img src="imagen2.png" class="titulo-img">
+  <div class="container">
+    <!-- 🖼️ Imagen 2 (arriba) -->
+    <img src="imagen2.png" class="titulo-img">
 
-  <!-- 🖼️ Imagen central -->
-  <img src="imagen.png" class="dibujo">
+    <!-- 🖼️ Imagen 1 (debajo) -->
+    <img src="imagen.png" class="dibujo">
 
-  <!-- 🖼️ Imagen botón -->
-  <img src="imagen3.png" id="btnImg" class="boton-img">
+    <!-- 🖼️ Imagen botón -->
+    <img src="imagen3.png" id="btnImg" class="boton-img">
+  </div>
 
   <script>
     // Mostrar botón después de 5 segundos
