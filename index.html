@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      font-family: Arial;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* 🖼️ Encabezado */
+    .titulo-img {
+      width: 70%;
+      max-width: 350px;
+      display: block;
+      margin: 40px auto 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 🖼️ Imagen central */
+    .dibujo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 400px;
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    /* 🖼️ Imagen botón */
+    .boton-img {
+      position: absolute;
+      bottom: 80px; /* 🔥 más arriba */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      cursor: pointer;
+
+      opacity: 0;
+      transition: opacity 1.5s ease, transform 0.3s ease;
+
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Aparición */
+    .mostrar {
+      opacity: 1;
+    }
+
+    /* Hover */
+    .boton-img:hover {
+      transform: translateX(-50%) scale(1.08);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🖼️ Encabezado -->
+  <img src="imagen2.png" class="titulo-img">
+
+  <!-- 🖼️ Imagen central -->
+  <img src="imagen.png" class="dibujo">
+
+  <!-- 🖼️ Imagen botón -->
+  <img src="imagen3.png" id="btnImg" class="boton-img">
+
+  <script>
+    // Mostrar botón después de 5 segundos
+    setTimeout(() => {
+      document.getElementById("btnImg").classList.add("mostrar");
+    }, 5000);
+
+    // Acción al hacer clic
+    document.getElementById("btnImg").addEventListener("click", () => {
+      alert("👀 Aquí empieza lo bueno...");
+    });
+  </script>
+
+</body>
+</html>
