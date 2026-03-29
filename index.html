@@ -18,12 +18,12 @@
       align-items: center;
     }
 
-    /* Contenedor principal */
+    /* Contenedor */
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px; /* espacio entre elementos */
+      gap: 20px;
     }
 
     /* Imagen encabezado */
@@ -32,11 +32,12 @@
       max-width: 350px;
     }
 
-    /* Imagen principal */
+    /* Imagen principal (🔥 MÁS GRANDE) */
     .dibujo {
-      width: 80%;
-      max-width: 400px;
+      width: 90%;
+      max-width: 550px;
       border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
 
     /* Imagen botón */
@@ -60,7 +61,7 @@
       box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     }
 
-    /* 📱 Ajuste celular */
+    /* 📱 Celular */
     @media (max-width: 600px) {
       .boton-img {
         width: 150px;
@@ -71,10 +72,10 @@
 <body>
 
   <div class="container">
-    <!-- 🖼️ Imagen 2 (arriba) -->
+    <!-- 🖼️ Encabezado -->
     <img src="imagen2.png" class="titulo-img">
 
-    <!-- 🖼️ Imagen 1 (debajo) -->
+    <!-- 🖼️ Imagen principal -->
     <img src="imagen.png" class="dibujo">
 
     <!-- 🖼️ Imagen botón -->
