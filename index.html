@@ -37,12 +37,12 @@
       z-index: 1;
     }
 
-    /* 🖼️ Imagen botón (posición corregida) */
+    /* 🖼️ Imagen botón (más arriba) */
     .boton-img {
       position: absolute;
       bottom: 50%;
       left: 50%;
-      transform: translate(-50%, 120px); /* 🔥 controla altura */
+      transform: translate(-50%, 40px); /* 🔥 AJUSTADO */
       width: 180px;
       cursor: pointer;
 
@@ -60,7 +60,7 @@
 
     /* Hover */
     .boton-img:hover {
-      transform: translate(-50%, 120px) scale(1.08);
+      transform: translate(-50%, 40px) scale(1.08);
       box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     }
 
@@ -68,11 +68,11 @@
     @media (max-width: 600px) {
       .boton-img {
         width: 150px;
-        transform: translate(-50%, 80px); /* 👈 más arriba en celular */
+        transform: translate(-50%, 20px); /* 🔥 MÁS ARRIBA */
       }
 
       .boton-img:hover {
-        transform: translate(-50%, 80px) scale(1.08);
+        transform: translate(-50%, 20px) scale(1.08);
       }
     }
   </style>
