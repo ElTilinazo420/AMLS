@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      font-family: Arial;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* 🖼️ Encabezado */
+    .titulo-img {
+      width: 70%;
+      max-width: 350px;
+      display: block;
+      margin: 40px auto 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 🖼️ Imagen centrada EXACTA */
+    .dibujo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 400px;
+      border-radius: 20px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagen de encabezado -->
+  <img src="imagen2.png" class="titulo-img">
+
+  <!-- Imagen central -->
+  <img src="imagen.png" class="dibujo">
+
+</body>
+</html>
