@@ -40,7 +40,7 @@
     /* 🖼️ Imagen botón */
     .boton-img {
       position: absolute;
-      bottom: 80px; /* 🔥 más arriba */
+      bottom: 8vh; /* 🔥 adaptable a pantalla */
       left: 50%;
       transform: translateX(-50%);
       width: 180px;
@@ -63,6 +63,14 @@
       transform: translateX(-50%) scale(1.08);
       box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     }
+
+    /* 📱 Ajuste para celular */
+    @media (max-width: 600px) {
+      .boton-img {
+        width: 150px;
+        bottom: 10vh; /* 👈 más arriba en celular */
+      }
+    }
   </style>
 </head>
 <body>
@@ -78,9 +86,14 @@
 
   <script>
     // Mostrar botón después de 5 segundos
-    setTimeout(() => {
-      document.getElementById("btnImg").classList.add("mostrar");
-    }, 5000);
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const btn = document.getElementById("btnImg");
+        if (btn) {
+          btn.classList.add("mostrar");
+        }
+      }, 5000);
+    });
 
     // Acción al hacer clic
     document.getElementById("btnImg").addEventListener("click", () => {
